@@ -1,0 +1,58 @@
+{
+  "name": "stash-mapfile",
+  "version": "1.0.0",
+  "description": "stash source-map files，and restore them",
+  "author": {
+    "name": "jzone"
+  },
+  "bin": {
+    "stash-mapfile": "./bin/index.js"
+  },
+  "type": "module",
+  "contributors": [],
+  "homepage": "https://github.com/zhixiaoqiang/stash-mapfile",
+  "bugs": "https://github.com/zhixiaoqiang/stash-mapfile/issues",
+  "repository": "https://github.com/zhixiaoqiang/stash-mapfile",
+  "license": "MIT",
+  "engines": {
+    "node": ">=10"
+  },
+  "main": "index.js",
+  "files": [
+    "lib",
+    "index.js"
+  ],
+  "scripts": {
+    "start": "esno ./index.ts",
+    "lint": "eslint . --cache --fix",
+    "format": "prettier --loglevel warn --write \"**/*.{js,css,md}\"",
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "dependencies": {
+    "fs-extra": "^10.1.0",
+    "globby": "^13.1.2"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "@types/node": "^18.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.30.6",
+    "@typescript-eslint/parser": "^5.30.6",
+    "eslint": "^8.19.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-module-utils": "^2.7.3",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "esno": "^0.16.3",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4"
+  },
+  "lint-staged": {
+    "*.(j|t)s": "eslint --cache --fix",
+    "*.{css,md}": "prettier --write"
+  }
+}
