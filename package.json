@@ -1,7 +1,7 @@
 {
   "name": "stash-mapfile",
   "version": "1.0.0",
-  "description": "stash source-map files，and restore them",
+  "description": "stash source-map files，and restore them when you need",
   "author": {
     "name": "jzone"
   },
