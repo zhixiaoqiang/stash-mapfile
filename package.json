@@ -19,19 +19,24 @@
   },
   "main": "index.js",
   "files": [
-    "lib",
-    "index.js"
+    "bin",
+    "lib"
   ],
   "scripts": {
     "start": "esno ./index.ts",
+    "dev": "tsc -w",
+    "build": "tsc",
     "lint": "eslint . --cache --fix",
     "format": "prettier --loglevel warn --write \"**/*.{js,css,md}\"",
     "prepare": "husky install"
   },
   "keywords": [],
   "dependencies": {
+    "execa": "^6.1.0",
     "fs-extra": "^10.1.0",
-    "globby": "^13.1.2"
+    "globby": "^13.1.2",
+    "inquirer": "^9.0.1",
+    "meow": "^10.1.3"
   },
   "devDependencies": {
     "@types/fs-extra": "^9.0.13",

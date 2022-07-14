@@ -15,5 +15,9 @@ module.exports = {
     parser: '@typescript-eslint/parser',
     ecmaVersion: 'latest',
     sourceType: 'module'
+  },
+  rules: {
+    '@typescript-eslint/ban-ts-comment': 'warn',
+    '@typescript-eslint/no-unused-vars': 'warn'
   }
 }
