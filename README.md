@@ -1,4 +1,4 @@
-# Stash map files (WIP)
+# Stash map files
 
 > stash source-map files，and restore them when you need.
 
