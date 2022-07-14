@@ -2,9 +2,7 @@
   "name": "stash-mapfile",
   "version": "1.0.0",
   "description": "stash source-map files，and restore them when you need",
-  "author": {
-    "name": "jzone"
-  },
+  "author": "zhixiaoqiang <xdnazi1985@gmail.com> (https://zhixiaoqiang.github.io/zhixiaoqiang/)",
   "bin": {
     "stash-mapfile": "./bin/index.js"
   },
@@ -15,9 +13,9 @@
   "repository": "https://github.com/zhixiaoqiang/stash-mapfile",
   "license": "MIT",
   "engines": {
-    "node": ">=10"
+    "node": ">=16"
   },
-  "main": "index.js",
+  "main": "lib/index.js",
   "files": [
     "bin",
     "lib"

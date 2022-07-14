@@ -42,3 +42,23 @@ stash-mapfile
 ```shell
 stash-mapfile restore
 ```
+
+## Development
+
+### Local
+
+```bash
+pnpm start
+```
+
+### Link
+
+```bash
+1. pnpm dev
+
+2. npm link # yalc publish
+```
+
+## License
+
+MIT License Copyright 2022 [zhixiaoqiang](https://github.com/zhixiaoqiang)
