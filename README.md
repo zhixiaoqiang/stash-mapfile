@@ -34,7 +34,7 @@ stash-mapfile clean
 > Stash all mapfiles, can be restore
 
 ```shell
-stash-mapfile
+stash-mapfile stash
 ```
 
 ### Restore
