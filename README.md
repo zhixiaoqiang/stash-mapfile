@@ -4,7 +4,7 @@
 
 ![](./public/principle-of-realization.png)
 
-> NOTE!: This is to solve the inaccurate positioning of the source code for breakpoint debugging.
+> NOTE!: This is to solve the inaccurate positioning of the source code of the [miniprogram devtools](https://developers.weixin.qq.com/miniprogram/dev/devtools/devtools.html) breakpoint debugging .
 
 ## Install
 
