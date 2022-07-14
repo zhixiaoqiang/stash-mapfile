@@ -2,6 +2,8 @@
 
 > stash source-map files，and restore them when you need.
 
+![](./public/principle-of-realization.png)
+
 > NOTE!: This is to solve the inaccurate positioning of the source code for breakpoint debugging.
 
 ## Install
