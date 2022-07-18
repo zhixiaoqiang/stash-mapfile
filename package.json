@@ -26,7 +26,8 @@
     "build": "tsc",
     "lint": "eslint . --cache --fix",
     "format": "prettier --loglevel warn --write \"**/*.{js,css,md}\"",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "markdownlint-fix": "markdownlint-cli2-fix '**.md' '#node_modules'"
   },
   "keywords": [],
   "dependencies": {
@@ -51,11 +52,13 @@
     "esno": "^0.16.3",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
+    "markdownlint-cli2": "^0.4.0",
     "prettier": "^2.7.1",
     "typescript": "^4.7.4"
   },
   "lint-staged": {
     "*.(j|t)s": "eslint --cache --fix",
-    "*.{css,md}": "prettier --write"
+    "*.{css,md}": "prettier --write",
+    "*.md": "pnpm markdownlint-fix"
   }
 }
