@@ -10,6 +10,7 @@
     "allowSyntheticDefaultImports": true,
     "pretty": true,
     "outDir": "./lib",
+    "declaration": true,
     "lib": [
       "esnext",
       "DOM",
