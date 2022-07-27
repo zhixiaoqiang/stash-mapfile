@@ -15,7 +15,24 @@
   "engines": {
     "node": ">=16"
   },
+  "keywords": [
+    "devtools",
+    "stash",
+    "source-map",
+    "clear"
+  ],
+  "licenses": "MIT",
   "main": "lib/index.js",
+  "module": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./lib/*",
+        "./lib/index.d.ts"
+      ]
+    }
+  },
   "files": [
     "bin",
     "lib"
