@@ -15,12 +15,7 @@
   "engines": {
     "node": ">=16"
   },
-  "keywords": [
-    "devtools",
-    "stash",
-    "source-map",
-    "clear"
-  ],
+  "keywords": [],
   "licenses": "MIT",
   "main": "lib/index.js",
   "module": "lib/index.js",
@@ -44,9 +39,9 @@
     "lint": "eslint . --cache --fix",
     "format": "prettier --loglevel warn --write \"**/*.{js,css,md}\"",
     "prepare": "husky install",
-    "markdownlint-fix": "markdownlint-cli2-fix '**.md' '#node_modules'"
+    "markdownlint-fix": "markdownlint-cli2-fix '**.md' '#node_modules'",
+    "changelogen": "changelogen"
   },
-  "keywords": [],
   "dependencies": {
     "execa": "^6.1.0",
     "fs-extra": "^10.1.0",
@@ -60,6 +55,7 @@
     "@types/node": "^18.0.3",
     "@typescript-eslint/eslint-plugin": "^5.30.6",
     "@typescript-eslint/parser": "^5.30.6",
+    "changelogen": "^0.1.1",
     "eslint": "^8.19.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-module-utils": "^2.7.3",
