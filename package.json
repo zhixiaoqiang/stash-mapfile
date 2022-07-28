@@ -1,6 +1,6 @@
 {
   "name": "stash-mapfile",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "stash source-map files，and restore them when you need",
   "author": "zhixiaoqiang <xdnazi1985@gmail.com> (https://zhixiaoqiang.github.io/zhixiaoqiang/)",
   "bin": {
