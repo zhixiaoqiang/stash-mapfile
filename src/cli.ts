@@ -1,12 +1,11 @@
-import { globby } from 'globby'
-import { remove } from 'fs-extra'
 import meow from 'meow'
-import { execa } from 'execa'
 import inquirer from 'inquirer'
 import { dirname } from 'path'
 import { fileURLToPath } from 'url'
+
 import { CommandEnum, COMMAND_HELP_INFO } from './constants.js'
 import { log } from './utils/index.js'
+import { removeMapFiles, restoreMapFiles, stashMapFiles } from './core.js'
 
 const __dirname = fileURLToPath(dirname(import.meta.url))
 
@@ -39,24 +38,10 @@ if (CommandEnum.stash === command || CommandEnum.clean === command) {
     .then(async (answers) => {
       if (!answers.confirmRemove) return
       if (CommandEnum.stash === command) {
-        try {
-        /** check git exist & had log */
-          log('check git exist & had log')
-          await execa('git', ['log', '--oneline'])
-        } catch (error) {
-        /** init git & commit */
-          log('init git & commit')
-          await execa('git', ['init'])
-          await execa('git', ['add', '-A'])
-          await execa('git', ['commit', '-m', 'chore: create a temp commit'])
-        }
+        stashMapFiles()
       }
 
-      log('remove *.map file')
-      const result = await globby(['./**/*.map'])
-      if (result.length) {
-        await Promise.all(result.map(path => remove(path)))
-      }
+      removeMapFiles()
     })
     .catch((error) => {
       log('Error', error)
@@ -73,14 +58,7 @@ if (CommandEnum.stash === command || CommandEnum.clean === command) {
     ])
     .then(async (answers) => {
       if (!answers.confirmRestore) return
-      try {
-        log('git checkout -- "*.map"')
-        await execa('git', ['checkout', '--', '*.map'])
-        log('remove git')
-        await execa('rm', ['-rf', '.git'])
-      } catch (error) {
-        log('no git, you can run stash-mapfile')
-      }
+      restoreMapFiles()
     })
     .catch((error) => {
       log('Error', error)

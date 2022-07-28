@@ -45,6 +45,16 @@ stash-mapfile stash
 stash-mapfile restore
 ```
 
+## Node Api
+
+```ts
+import {
+  stashMapFiles,
+  removeMapFiles,
+  restoreMapFiles
+} from "stash-mapfile";
+```
+
 ## Development
 
 ### Local
