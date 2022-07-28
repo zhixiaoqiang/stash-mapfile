@@ -1,5 +1,19 @@
 # Changelog
 
+## 1.0.3
+
+### 🚀 Enhancements
+
+- Change file structure, support node api (16db5f8)
+
+### 🏡 Chore
+
+- Add CHANGELOG.md and add generate changelog script (33b9775)
+
+### ❤️ Contributors
+
+- Jzone
+
 ## 1.0.2
 
 ### 📖 Documentation
